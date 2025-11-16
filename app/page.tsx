@@ -4,6 +4,7 @@ import SolanaStatusStrip from "@/components/SolanaStatusStrip";
 import MonkeyStack from "@/components/MonkeyStack";
 import BotExplainer from "@/components/BotExplainer";
 import ArchitectureStrip from "@/components/ArchitectureStrip";
+import TeamNarrative from "@/components/TeamNarrative";
 import TokenUtility from "@/components/TokenUtility";
 import RoadmapStrip from "@/components/RoadmapStrip";
 import RiskWall from "@/components/RiskWall";
@@ -31,6 +32,10 @@ export default function HomePage() {
         <div className="section-divider" />
         
         <ArchitectureStrip />
+        
+        <div className="section-divider" />
+        
+        <TeamNarrative />
         
         <div className="section-divider" />
         

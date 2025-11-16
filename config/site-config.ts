@@ -51,15 +51,19 @@ export const siteConfig = {
   },
   botExplainer: {
     title: "What MEV Monkey does",
+    intro: "Our team of experienced Solana developers has been building MEV tools since the early days of DeFi. We've analyzed thousands of transactions, studied MEV patterns across multiple chains, and now we're bringing that expertise to Solana traders.",
     bullets: [
       "Watches Solana mempool and DEX events in real time to catch opportunities as they emerge",
       "Analyzes on chain patterns to spot potential risks and red flags before you get burned",
       "Shows you the full picture with timing windows, liquidity depth, and MEV context",
       "Gives you the intel you need while keeping you in complete control of every trade",
+      "Integrates with popular Solana wallets for seamless transaction signing",
+      "Tracks historical performance metrics to help you understand what's working",
     ],
   },
   architecture: {
-    title: "Solana MEV pipeline (planned)",
+    title: "How the system works",
+    intro: "Built on years of MEV research and real world trading experience. Our architecture is designed to be fast, reliable, and transparent.",
     stages: [
       {
         label: "1. Intake",

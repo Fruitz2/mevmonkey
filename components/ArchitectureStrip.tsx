@@ -5,9 +5,15 @@ export default function ArchitectureStrip() {
   return (
     <section className="py-24 px-6">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-6xl font-display font-bold text-yellow-primary mb-16 text-center">
+        <h2 className="text-4xl md:text-6xl font-display font-bold text-yellow-primary mb-8 text-center">
           {siteConfig.architecture.title}
         </h2>
+
+        {siteConfig.architecture.intro && (
+          <p className="text-lg text-muted text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+            {siteConfig.architecture.intro}
+          </p>
+        )}
 
         <div className="grid md:grid-cols-4 gap-6">
           {siteConfig.architecture.stages.map((stage, i) => (
