@@ -3,20 +3,28 @@ import { siteConfig } from "@/config/site-config";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
+    <section className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-yellow-primary/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-primary/10 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-sol/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
       
-      <div className="container mx-auto max-w-full px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center justify-center">
-          <div className="order-2 lg:order-1 w-full lg:w-auto text-center lg:text-left">
-            <div className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] mb-4 text-sol/80 flex items-center gap-2 justify-center lg:justify-start">
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
+            <div className="inline-flex items-center gap-3 text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-sol/80 px-4 py-2 rounded-full border border-sol/20 bg-sol/5 backdrop-blur-xl">
+              <span className="w-2 h-2 rounded-full bg-sol animate-pulse" />
               <span>SOLANA</span>
-              <span className="w-1 h-1 rounded-full bg-sol"></span>
+              <span className="text-sol/40">•</span>
               <span>MEV LAB</span>
+              <span className="w-2 h-2 rounded-full bg-sol animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
             
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-black mb-4 md:mb-6 text-glow animate-fade-in tracking-tight">
-              {siteConfig.hero.title}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black leading-[0.9] animate-fade-in tracking-tight">
+              <span className="block bg-gradient-to-r from-yellow-primary via-yellow-secondary to-yellow-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                {siteConfig.hero.title}
+              </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-400 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
@@ -52,20 +60,18 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 flex justify-center overflow-visible">
-            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-primary/10 to-sol/10 blur-3xl rounded-full opacity-50" />
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] aspect-square">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-primary/20 to-sol/20 blur-3xl rounded-full animate-pulse" />
+              <div className="absolute inset-0 animate-spin-slow">
+                <div className="h-full w-full rounded-full border border-yellow-primary/20" />
+              </div>
               <Image
                 src="/logo.png"
                 alt="MEV Monkey"
-                width={3000}
-                height={3000}
-                className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain'
-                }}
+                width={2000}
+                height={2000}
+                className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-110 transition-transform duration-700 ease-out w-full h-full object-contain"
                 priority
               />
             </div>

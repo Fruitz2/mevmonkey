@@ -25,13 +25,25 @@ const config: Config = {
         mono: ["JetBrains Mono", "monospace"],
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in",
-        glow: "glow 2s ease-in-out infinite alternate",
+        "fade-in": "fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
+        "gradient": "gradient 8s linear infinite",
+        "spin-slow": "spin 20s linear infinite",
+        "float": "float 6s ease-in-out infinite",
+        "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(249, 214, 72, 0.3)" },

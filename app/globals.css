@@ -11,31 +11,73 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-bg text-fg font-sans antialiased;
     min-height: 100vh;
+    overflow-x: hidden;
+    background: 
+      radial-gradient(ellipse at top left, rgba(249, 214, 72, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(20, 241, 149, 0.05) 0%, transparent 50%),
+      #020305;
   }
 
   ::selection {
     @apply bg-yellow-primary/30;
   }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(249, 214, 72, 0.3);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 214, 72, 0.5);
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 sm:px-8 sm:py-4 font-semibold rounded-xl transition-all duration-300 uppercase tracking-wider text-sm sm:text-base;
+    @apply relative px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 font-semibold rounded-xl transition-all duration-500 uppercase text-xs sm:text-sm md:text-base overflow-hidden;
     background: linear-gradient(135deg, #F9D648 0%, #FFD93D 100%);
     color: #020305;
-    box-shadow: 0 4px 15px 0 rgba(249, 214, 72, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(0);
+    letter-spacing: 0.1em;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
   }
   
   .btn-primary:hover {
-    background: linear-gradient(135deg, #FFD93D 0%, #F9D648 100%);
-    box-shadow: 0 6px 20px 0 rgba(249, 214, 72, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    transform: perspective(1000px) rotateX(-10deg) translateY(-4px);
+    box-shadow: 
+      0 20px 40px -15px rgba(249, 214, 72, 0.5),
+      0 0 0 1px rgba(249, 214, 72, 0.2),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
   }
 
   .btn-secondary {
@@ -53,17 +95,40 @@
   }
 
   .panel {
-    @apply rounded-2xl p-6 sm:p-8 transition-all duration-300;
-    background: linear-gradient(135deg, rgba(10, 10, 15, 0.6) 0%, rgba(20, 20, 30, 0.6) 100%);
-    border: 1px solid rgba(249, 214, 72, 0.08);
-    backdrop-filter: blur(20px) saturate(120%);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    @apply relative rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 overflow-hidden;
+    background: 
+      linear-gradient(135deg, rgba(10, 10, 15, 0.8) 0%, rgba(20, 20, 30, 0.8) 100%),
+      radial-gradient(circle at 20% 50%, rgba(249, 214, 72, 0.05) 0%, transparent 50%);
+    backdrop-filter: blur(40px) saturate(150%);
+    transform: translateZ(0);
+  }
+  
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent,
+      rgba(249, 214, 72, 0.5),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 
   .panel:hover {
-    @apply transform;
-    border-color: rgba(249, 214, 72, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(249, 214, 72, 0.1);
+    transform: translateZ(50px) rotateX(2deg);
+    box-shadow: 
+      0 20px 40px -10px rgba(249, 214, 72, 0.2),
+      0 0 0 1px rgba(249, 214, 72, 0.1),
+      inset 0 0 30px rgba(249, 214, 72, 0.02);
+  }
+  
+  .panel:hover::before {
+    opacity: 1;
   }
 
   .section-divider {
@@ -99,22 +164,36 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+  .container-responsive {
+    @apply w-full px-4 sm:px-6 lg:px-8;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  @media (min-width: 640px) {
+    .container-responsive {
+      max-width: 640px;
+    }
   }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  
+  @media (min-width: 768px) {
+    .container-responsive {
+      max-width: 768px;
+    }
   }
-  50% {
-    transform: translateY(-10px);
+  
+  @media (min-width: 1024px) {
+    .container-responsive {
+      max-width: 1024px;
+    }
   }
-}
+  
+  @media (min-width: 1280px) {
+    .container-responsive {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .container-responsive {
+      max-width: 1536px;
+    }
+  }
