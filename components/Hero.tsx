@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
       <div className="absolute inset-0 bg-gradient-radial from-yellow-primary/5 via-transparent to-transparent" />
       
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-full px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
           <div className="order-2 md:order-1">
             <div className="text-sm font-mono text-sol uppercase tracking-widest mb-4">
               SOLANA • MEV LAB
@@ -50,8 +50,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative">
+          <div className="order-1 md:order-2 flex justify-center overflow-visible">
+            <div className="relative w-[800px] h-[800px] lg:w-[1000px] lg:h-[1000px] xl:w-[1200px] xl:h-[1200px]">
               <div className="absolute inset-0 bg-yellow-primary/20 blur-3xl rounded-full animate-pulse" />
               <Image
                 src="/logo.png"
@@ -59,6 +59,11 @@ export default function Hero() {
                 width={3000}
                 height={3000}
                 className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
                 priority
               />
             </div>
