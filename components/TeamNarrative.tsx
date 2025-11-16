@@ -11,7 +11,7 @@ export default function TeamNarrative() {
           
           <div className="space-y-6 text-lg text-muted leading-relaxed">
             <p>
-              Our team has been deep in the Solana ecosystem since the beginning. We've traded through the ups and downs, built tools for ourselves, and learned what actually works in fast moving markets.
+              Our team has been deep in the Solana ecosystem since the beginning. We&apos;ve traded through the ups and downs, built tools for ourselves, and learned what actually works in fast moving markets.
             </p>
             
             <p>
@@ -19,7 +19,7 @@ export default function TeamNarrative() {
             </p>
             
             <p>
-              We're not promising magic. We're offering the same tools and insights we use ourselves. Real time data, pattern recognition, and clear warnings. The kind of edge that comes from experience and good engineering, not hype.
+              We&apos;re not promising magic. We&apos;re offering the same tools and insights we use ourselves. Real time data, pattern recognition, and clear warnings. The kind of edge that comes from experience and good engineering, not hype.
             </p>
           </div>
         </div>
