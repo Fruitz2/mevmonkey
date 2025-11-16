@@ -56,8 +56,8 @@ export default function Hero() {
               <Image
                 src="/logo.png"
                 alt="MEV Monkey"
-                width={700}
-                height={700}
+                width={980}
+                height={980}
                 className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500"
                 priority
               />

@@ -14,7 +14,7 @@ export const siteConfig = {
     eyebrow: "SOLANA • MEV LAB",
     title: "MEV MONKEY",
     subtitle:
-      "Advanced Solana MEV tools for traders who move fast. Spot opportunities before they happen, avoid rugs before they pull, and stay ahead of the pack.",
+      "Advanced Solana MEV tools delivered through Telegram. Spot opportunities before they happen, avoid rugs before they pull, and stay ahead of the pack.",
     bullets: [
       "Real-time Solana mempool monitoring for new pools and market movements",
       "Smart rug detection using on-chain patterns and creator analysis",
@@ -53,12 +53,12 @@ export const siteConfig = {
     title: "What MEV Monkey does",
     intro: "Our team of experienced Solana developers has been building MEV tools since the early days of DeFi. We've analyzed thousands of transactions, studied MEV patterns across multiple chains, and now we're bringing that expertise to Solana traders.",
     bullets: [
-      "Watches Solana mempool and DEX events in real time to catch opportunities as they emerge",
-      "Analyzes on chain patterns to spot potential risks and red flags before you get burned",
-      "Shows you the full picture with timing windows, liquidity depth, and MEV context",
-      "Gives you the intel you need while keeping you in complete control of every trade",
-      "Integrates with popular Solana wallets for seamless transaction signing",
-      "Tracks historical performance metrics to help you understand what's working",
+      "Monitors Solana mempool and DEX activity in real time for new token launches and opportunities",
+      "Analyzes on chain patterns on Solana to identify rug pulls and suspicious activity",
+      "Provides timing insights, liquidity analysis, and MEV context specific to Solana",
+      "Operates through a Telegram bot interface for easy access anywhere",
+      "Works with Solana wallets like Phantom for secure transaction signing",
+      "Tracks your performance on Solana to help refine your trading strategy",
     ],
   },
   architecture: {
@@ -82,8 +82,8 @@ export const siteConfig = {
       },
       {
         label: "4. Execution",
-        title: "Your Control",
-        body: "The bot prepares transactions for you, but every trade requires your confirmation. Your wallet, your keys, your decisions.",
+        title: "Telegram Bot Interface",
+        body: "Access all features through our Telegram bot (@mevmonkey_bot, currently in development). Get alerts, view opportunities, and execute trades right from Telegram with your Solana wallet.",
       },
     ],
   },
@@ -152,7 +152,7 @@ export const siteConfig = {
   community: {
     title: "Join the Lab",
     body:
-      "Built for Solana traders who want an edge. Whether you're hunting new launches or avoiding traps, MEV Monkey gives you the intel you need to trade smarter. Join our community to get updates and help us build the tools traders actually want.",
+      "Built for Solana traders who want an edge. Whether you're hunting new launches on Solana or avoiding rug pulls, MEV Monkey gives you the intel you need to trade smarter. Join our Telegram community to get early access to @mevmonkey_bot and help shape what we build next.",
     ctas: ["Join Telegram", "Follow on X"],
   },
 };
