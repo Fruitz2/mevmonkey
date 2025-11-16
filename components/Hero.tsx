@@ -9,11 +9,11 @@ export default function Hero() {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <div className="text-sm font-mono text-yellow-primary uppercase tracking-widest mb-4">
-              {siteConfig.hero.eyebrow}
+            <div className="text-sm font-mono text-sol uppercase tracking-widest mb-4">
+              SOLANA • MEV LAB
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-display font-bold text-yellow-primary mb-6 text-glow">
+            <h1 className="text-6xl md:text-8xl font-display font-bold text-yellow-primary mb-6 text-glow animate-fade-in">
               {siteConfig.hero.title}
             </h1>
             
@@ -51,14 +51,17 @@ export default function Hero() {
           </div>
 
           <div className="order-1 md:order-2 flex justify-center">
-            <Image
-              src="/logo.png"
-              alt="MEV Monkey"
-              width={500}
-              height={500}
-              className="animate-fade-in drop-shadow-2xl"
-              priority
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-yellow-primary/20 blur-3xl rounded-full animate-pulse" />
+              <Image
+                src="/logo.png"
+                alt="MEV Monkey"
+                width={600}
+                height={600}
+                className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

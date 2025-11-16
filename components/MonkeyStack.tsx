@@ -15,14 +15,14 @@ export default function MonkeyStack() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {siteConfig.monkeyStack.items.map((item, i) => (
-            <div key={i} className="panel hover:border-yellow-accent/40 transition-all duration-300">
-              <div className="text-sm font-mono text-yellow-primary uppercase tracking-wider mb-4">
+            <div key={i} className="panel group cursor-pointer">
+              <div className="text-sm font-mono text-yellow-primary uppercase tracking-wider mb-4 group-hover:text-yellow-secondary transition-colors">
                 {item.label}
               </div>
-              <h3 className="text-2xl font-display font-bold mb-4">
+              <h3 className="text-2xl font-display font-bold mb-4 group-hover:text-yellow-primary transition-colors">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed">
+              <p className="text-muted leading-relaxed group-hover:text-fg/90 transition-colors">
                 {item.body}
               </p>
             </div>

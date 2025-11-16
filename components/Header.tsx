@@ -1,14 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site-config";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-yellow-accent/20">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-7xl">
-        <Link href="/" className="text-2xl font-display font-bold text-yellow-primary">
-          🐒 MEV MONKEY
+    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-yellow-accent/30">
+      <div className="container mx-auto px-6 py-3 flex items-center justify-between max-w-7xl">
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/logo.png"
+            alt="MEV Monkey"
+            width={50}
+            height={50}
+            className="drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+          />
+          <span className="text-2xl font-display font-bold text-yellow-primary group-hover:text-yellow-secondary transition-colors">
+            MEV MONKEY
+          </span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">

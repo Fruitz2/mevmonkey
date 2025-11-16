@@ -11,17 +11,17 @@ export const siteConfig = {
     contract: "REPLACE_ME",
   },
   hero: {
-    eyebrow: "SOLANA • MEV LAB • UTILITY MEME",
+    eyebrow: "SOLANA • MEV LAB",
     title: "MEV MONKEY",
     subtitle:
-      "One hyperactive monkey glued to Solana's mempool. Tools for people who already know what risk feels like.",
+      "Advanced Solana MEV tools for traders who move fast. Spot opportunities, avoid rugs, stay ahead of the pack.",
     bullets: [
-      "Planned: Solana pool snipes, rug-check hints, simple MEV surf tools.",
-      "No signals. No 100x promises. Just faster eyes on the mempool.",
-      "If you use it well, it might help you trade smarter. It might also still be wrong.",
+      "Real-time Solana mempool monitoring for new pools and market movements",
+      "Smart rug detection using on-chain patterns and creator analysis",
+      "MEV-aware execution hints to help you trade with better timing",
     ],
     primaryCta: "View on Pump.fun",
-    secondaryCtas: ["Open Telegram", "View MEVM Token"],
+    secondaryCtas: ["Join Telegram", "View MEVM Token"],
   },
   status: [
     { label: "Network", value: "Solana", tone: "ok" },
@@ -50,12 +50,12 @@ export const siteConfig = {
     ],
   },
   botExplainer: {
-    title: "What the bot actually tries to do",
+    title: "What MEV Monkey does",
     bullets: [
-      "Monitor Solana mempool and DEX events for new meme pools and weird activity.",
-      "Flag basic rug vibes using simple heuristics: creator behavior, LP patterns, timing.",
-      "Surface 'MEV surf' hints: are you likely early, late, or getting farmed?",
-      "Generate human-readable trade ideas. You decide if you click send.",
+      "Monitors Solana mempool and DEX events in real-time for emerging opportunities",
+      "Analyzes on-chain patterns to identify potential risks and red flags",
+      "Provides MEV-aware insights: timing windows, liquidity depth, and execution context",
+      "Delivers actionable intel while you stay in full control of your trades",
     ],
   },
   architecture: {
@@ -84,14 +84,14 @@ export const siteConfig = {
     ],
   },
   token: {
-    title: "Where MEVM fits in",
+    title: "MEVM Token Benefits",
     bullets: [
-      "Tiered access: basic dashboards for everyone, advanced lab panels for MEVM holders.",
-      "Potential fee perks: MEVM holders can get lower bot fees or occasional fee rebates into a public treasury.",
-      "Direction, not control: MEVM used for community polls on which Solana strategy or feature to prioritize next.",
+      "Access tiers: Free basic tools for everyone, premium features for MEVM holders",
+      "Fee benefits: MEVM holders enjoy reduced bot fees and priority access to new features",
+      "Community voice: Vote on which strategies and tools we build next",
     ],
     disclaimer:
-      "Owning MEVM does NOT guarantee profit, yield, or any return. It just plugs you deeper into the lab.",
+      "MEVM provides access and benefits, not guaranteed returns. Trade responsibly.",
   },
   roadmap: {
     title: "Rough plan (not a promise)",
@@ -135,20 +135,20 @@ export const siteConfig = {
     ],
   },
   risk: {
-    title: "Read this before you let monkey touch your trades",
+    title: "Trading Smart on Solana",
     bullets: [
-      "Solana is fast, but losses are faster if you don't know what you're doing.",
-      "Bots can and do lose money — especially on meme coins.",
-      "MEV is complex. Sometimes you are the one getting farmed.",
-      "Smart contracts, bots, and integrations can have bugs or be exploited.",
-      "Never put in more SOL than you can afford to see go to zero.",
+      "Crypto trading involves risk. Past performance doesn't indicate future results.",
+      "MEV tools help you make informed decisions, but markets are unpredictable.",
+      "Always do your own research and only invest what you can afford to lose.",
+      "Smart contracts and bots are powerful tools but require careful use.",
     ],
     disclaimer:
-      "Nothing here is financial advice. MEV Monkey is experimental software on Solana for people who already understand degen risk.",
+      "MEV Monkey provides tools and information. All trading decisions are your own. Not financial advice.",
   },
   community: {
-    title: "Who this is actually for",
-    body: "Solana degens who already understand slippage, rugs, and MEV — and want tools, not hand-holding. If you're here for guaranteed returns, please close the tab.",
-    ctas: ["Open Telegram", "Follow on X"],
+    title: "Join the Lab",
+    body:
+      "Built for Solana traders who want an edge. Whether you're hunting new launches or avoiding traps, MEV Monkey gives you the intel you need. Join our community to stay updated and help shape what we build next.",
+    ctas: ["Join Telegram", "Follow on X"],
   },
 };
