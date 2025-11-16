@@ -5,7 +5,7 @@ export default function ArchitectureStrip() {
   return (
     <section className="py-24 px-6">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-6xl font-display font-bold text-yellow-primary mb-8 text-center">
+        <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 text-center bg-gradient-to-r from-yellow-primary to-yellow-secondary bg-clip-text text-transparent">
           {siteConfig.architecture.title}
         </h2>
 
@@ -17,23 +17,21 @@ export default function ArchitectureStrip() {
 
         <div className="grid md:grid-cols-4 gap-6">
           {siteConfig.architecture.stages.map((stage, i) => (
-            <div key={i} className="relative">
-              <div className="panel h-full">
-                <div className="text-xs font-mono text-yellow-primary uppercase tracking-wider mb-3">
+            <div key={i} className="relative group">
+              <div className="panel h-full hover:border-yellow-primary/20 transition-all duration-300">
+                <div className="text-xs font-mono text-yellow-primary/60 uppercase tracking-[0.15em] mb-3">
                   {stage.label}
                 </div>
-                <h3 className="text-xl font-display font-bold mb-3">
+                <h3 className="text-xl font-display font-semibold mb-3 text-white/90">
                   {stage.title}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors leading-relaxed">
                   {stage.body}
                 </p>
               </div>
               
               {i < siteConfig.architecture.stages.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                  <ArrowRight className="text-yellow-accent" size={20} />
-                </div>
+                <ArrowRight className="absolute -right-4 top-1/2 transform -translate-y-1/2 text-yellow-primary/20 z-10 hidden md:block group-hover:text-yellow-primary/40 transition-colors" size={20} />
               )}
             </div>
           ))}

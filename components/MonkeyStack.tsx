@@ -22,14 +22,15 @@ export default function MonkeyStack() {
             },
             ...siteConfig.monkeyStack.items,
           ].map((item, i) => (
-            <div key={i} className="panel group cursor-pointer">
-              <div className="text-sm font-mono text-yellow-primary uppercase tracking-wider mb-4 group-hover:text-yellow-secondary transition-colors">
+            <div key={i} className="panel group cursor-pointer relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="text-xs font-mono text-yellow-primary/70 uppercase tracking-[0.15em] mb-4 transition-colors">
                 {item.label}
               </div>
-              <h3 className="text-2xl font-display font-bold mb-4 group-hover:text-yellow-primary transition-colors">
+              <h3 className="text-2xl font-display font-semibold mb-4 text-white/90 group-hover:text-white transition-colors">
                 {item.title}
               </h3>
-              <p className="text-muted leading-relaxed group-hover:text-fg/90 transition-colors">
+              <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors">
                 {item.body}
               </p>
             </div>
