@@ -9,15 +9,17 @@ export default function Hero() {
       <div className="container mx-auto max-w-full px-4 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center justify-center">
           <div className="order-2 lg:order-1 w-full lg:w-auto text-center lg:text-left">
-            <div className="text-sm font-mono text-sol uppercase tracking-widest mb-4">
-              SOLANA • MEV LAB
+            <div className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] mb-4 text-sol/80 flex items-center gap-2 justify-center lg:justify-start">
+              <span>SOLANA</span>
+              <span className="w-1 h-1 rounded-full bg-sol"></span>
+              <span>MEV LAB</span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-yellow-primary mb-4 md:mb-6 text-glow animate-fade-in">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-black mb-4 md:mb-6 text-glow animate-fade-in tracking-tight">
               {siteConfig.hero.title}
             </h1>
             
-            <p className="text-lg md:text-xl text-muted mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-gray-400 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
               {siteConfig.hero.subtitle}
             </p>
 
@@ -52,7 +54,7 @@ export default function Hero() {
 
           <div className="order-1 lg:order-2 flex justify-center overflow-visible">
             <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px]">
-              <div className="absolute inset-0 bg-yellow-primary/20 blur-3xl rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-primary/10 to-sol/10 blur-3xl rounded-full opacity-50" />
               <Image
                 src="/logo.png"
                 alt="MEV Monkey"

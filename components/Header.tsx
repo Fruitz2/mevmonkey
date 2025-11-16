@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site-config";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-yellow-accent/30">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-card backdrop-blur-xl border-b border-white/5">
       <div className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between max-w-7xl">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
           <Image
@@ -16,16 +16,16 @@ export default function Header() {
             height={50}
             className="drop-shadow-lg group-hover:scale-110 transition-transform duration-300 w-10 h-10 sm:w-12 sm:h-12"
           />
-          <span className="text-xl sm:text-2xl font-display font-bold text-yellow-primary group-hover:text-yellow-secondary transition-colors hidden sm:inline">
+          <span className="text-xl sm:text-2xl font-display font-bold hidden sm:inline bg-gradient-to-r from-yellow-primary to-yellow-secondary bg-clip-text text-transparent">
             MEV MONKEY
           </span>
-          <span className="text-xl font-display font-bold text-yellow-primary sm:hidden">
+          <span className="text-xl font-display font-bold bg-gradient-to-r from-yellow-primary to-yellow-secondary bg-clip-text text-transparent sm:hidden">
             MONK
           </span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#stack" className="text-muted hover:text-yellow-primary transition-colors">
+          <a href="#stack" className="text-gray-400 hover:text-yellow-primary transition-colors text-sm font-medium">
             Stack
           </a>
           <a href="#bot" className="text-muted hover:text-yellow-primary transition-colors">

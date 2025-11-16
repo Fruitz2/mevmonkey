@@ -25,21 +25,45 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 sm:px-8 sm:py-4 bg-yellow-primary text-bg font-bold rounded-lg hover:bg-yellow-secondary transition-all duration-300 uppercase tracking-wider shadow-lg hover:shadow-yellow-primary/50 text-sm sm:text-base;
+    @apply px-6 py-3 sm:px-8 sm:py-4 font-semibold rounded-xl transition-all duration-300 uppercase tracking-wider text-sm sm:text-base;
+    background: linear-gradient(135deg, #F9D648 0%, #FFD93D 100%);
+    color: #020305;
+    box-shadow: 0 4px 15px 0 rgba(249, 214, 72, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(0);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #FFD93D 0%, #F9D648 100%);
+    box-shadow: 0 6px 20px 0 rgba(249, 214, 72, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
   }
 
   .btn-secondary {
-    @apply px-6 py-3 sm:px-8 sm:py-4 border-2 border-yellow-accent text-yellow-primary font-medium rounded-lg hover:bg-yellow-primary/10 transition-all duration-300 uppercase tracking-wider text-sm sm:text-base;
+    @apply px-6 py-3 sm:px-8 sm:py-4 font-medium rounded-xl transition-all duration-300 uppercase tracking-wider text-sm sm:text-base;
+    background: rgba(249, 214, 72, 0.05);
+    border: 1px solid rgba(249, 214, 72, 0.2);
+    color: #F9D648;
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(249, 214, 72, 0.1);
+    border-color: rgba(249, 214, 72, 0.4);
+    box-shadow: 0 0 20px rgba(249, 214, 72, 0.15);
   }
 
   .panel {
-    @apply bg-surface border border-yellow-accent/20 rounded-2xl p-6 sm:p-8 backdrop-blur-sm transition-all duration-300;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F9D648' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @apply rounded-2xl p-6 sm:p-8 transition-all duration-300;
+    background: linear-gradient(135deg, rgba(10, 10, 15, 0.6) 0%, rgba(20, 20, 30, 0.6) 100%);
+    border: 1px solid rgba(249, 214, 72, 0.08);
+    backdrop-filter: blur(20px) saturate(120%);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
   .panel:hover {
-    @apply border-yellow-accent/40 transform scale-[1.02];
-    box-shadow: 0 8px 30px rgba(249, 214, 72, 0.15);
+    @apply transform;
+    border-color: rgba(249, 214, 72, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(249, 214, 72, 0.1);
   }
 
   .section-divider {
@@ -47,11 +71,21 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 30px rgba(249, 214, 72, 0.6), 0 0 60px rgba(249, 214, 72, 0.3);
+    background: linear-gradient(135deg, #F9D648 0%, #FFE873 50%, #F9D648 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 
   .bg-gradient-radial {
-    background: radial-gradient(circle at center, rgba(249, 214, 72, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(249, 214, 72, 0.03) 0%, transparent 70%);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 

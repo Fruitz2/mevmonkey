@@ -10,16 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         bg: "#020305",
-        surface: "#070A0F",
-        yellow: {
-          primary: "#F9D648",
-          secondary: "#FFEA7A",
-          accent: "#FFE05C",
-        },
-        sol: "#00FFA3",
-        fg: "#F7F7FB",
-        muted: "#A9B2C3",
-        error: "#FF4F7D",
+        surface: "#0A0B0F",
+        "yellow-primary": "#F9D648",
+        "yellow-secondary": "#FFE873",
+        "yellow-accent": "#FFC107",
+        sol: "#14F195",
+        fg: "#FFFFFF",
+        muted: "#9CA3AF",
+        error: "#EF4444",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
