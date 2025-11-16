@@ -1,8 +1,8 @@
 export const siteConfig = {
   meta: {
-    title: "MEV Monkey | Solana MEV Bot & Trading Tools",
+    title: "MEV Monkey - Solana Trading Bot | MONK Token",
     description:
-      "Advanced MEV tools for Solana traders. Real time mempool monitoring, rug detection, and smart execution hints. Built by traders, for traders who move fast.",
+      "Advanced Solana MEV bot and trading tools. Real-time mempool monitoring, rug detection, smart alerts via Telegram bot @mevmonkey_bot. Powered by MONK token.",
   },
   links: {
     pump: "https://pump.fun/coin/REPLACE_ME",
@@ -21,7 +21,7 @@ export const siteConfig = {
       "Access insights through a simple Telegram interface",
     ],
     primaryCta: "View on Pump.fun",
-    secondaryCtas: ["Join Telegram", "View MEVM Token"],
+    secondaryCtas: ["Join Telegram", "View MONK Token"],
   },
   status: [
     { label: "Network", value: "Solana", tone: "ok" },
@@ -33,9 +33,9 @@ export const siteConfig = {
     subtitle: "Three parts working together: access token, monitoring bot, and community feedback loop.",
     items: [
       {
-        label: "MEVM Token",
+        label: "MONK Token",
         title: "Access Token",
-        body: "Holding MEVM gets you access to premium bot features and reduced fees. It's utility, not an investment. No yield, no staking, just better access to the tools.",
+        body: "Holding MONK gets you access to premium bot features and reduced fees. It's utility, not an investment. No yield, no staking, just better access to the tools.",
       },
       {
         label: "MEV Bot",
@@ -88,14 +88,14 @@ export const siteConfig = {
     ],
   },
   token: {
-    title: "MEVM Token Benefits",
+    title: "MONK Token Benefits",
     bullets: [
-      "Free basic tools for everyone, with premium features unlocked for MEVM holders",
+      "Free basic tools for everyone, with premium features unlocked for MONK holders",
       "Token holders get reduced bot fees and early access to new features before anyone else",
       "Help decide what we build next through community votes and feature proposals",
     ],
     disclaimer:
-      "MEVM provides access and benefits, not guaranteed returns. Trade responsibly.",
+      "MONK provides access and benefits, not guaranteed returns. Trade responsibly.",
   },
   roadmap: {
     title: "Rough plan (not a promise)",
@@ -132,7 +132,7 @@ export const siteConfig = {
         title: "Public lab",
         bullets: [
           "Public launch with full featured UI",
-          "MEVM token integration for access tiers",
+          "MONK token integration for access tiers",
           "Complete documentation and guides",
         ],
       },

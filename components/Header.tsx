@@ -7,17 +7,20 @@ import { siteConfig } from "@/config/site-config";
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-xl border-b border-yellow-accent/30">
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between max-w-7xl">
-        <Link href="/" className="flex items-center gap-3 group">
+      <div className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between max-w-7xl">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
           <Image
             src="/logo.png"
             alt="MEV Monkey"
             width={50}
             height={50}
-            className="drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+            className="drop-shadow-lg group-hover:scale-110 transition-transform duration-300 w-10 h-10 sm:w-12 sm:h-12"
           />
-          <span className="text-2xl font-display font-bold text-yellow-primary group-hover:text-yellow-secondary transition-colors">
+          <span className="text-xl sm:text-2xl font-display font-bold text-yellow-primary group-hover:text-yellow-secondary transition-colors hidden sm:inline">
             MEV MONKEY
+          </span>
+          <span className="text-xl font-display font-bold text-yellow-primary sm:hidden">
+            MONK
           </span>
         </Link>
         
@@ -63,9 +66,9 @@ export default function Header() {
             href={siteConfig.links.pump}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-sm py-2 px-6"
+            className="btn-primary text-xs sm:text-sm py-2 px-3 sm:px-6"
           >
-            Buy MEVM
+            Buy MONK
           </a>
         </div>
       </div>
