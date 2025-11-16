@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site-config";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, CheckCircle } from "lucide-react";
 
 export default function TokenUtility() {
   return (
