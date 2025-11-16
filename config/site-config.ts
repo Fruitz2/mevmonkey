@@ -1,8 +1,8 @@
 export const siteConfig = {
   meta: {
-    title: "MEV Monkey — Solana MEV bot & degen lab",
+    title: "MEV Monkey | Solana MEV Bot & Trading Tools",
     description:
-      "Small Solana dev lab wiring a MEV-aware bot for meme traders. Black and yellow, loud and honest. No calls, no promises. Just tools, logs, and one very loud monkey.",
+      "Advanced MEV tools for Solana traders. Real time mempool monitoring, rug detection, and smart execution hints. Built by traders, for traders who move fast.",
   },
   links: {
     pump: "https://pump.fun/coin/REPLACE_ME",
@@ -14,7 +14,7 @@ export const siteConfig = {
     eyebrow: "SOLANA • MEV LAB",
     title: "MEV MONKEY",
     subtitle:
-      "Advanced Solana MEV tools for traders who move fast. Spot opportunities, avoid rugs, stay ahead of the pack.",
+      "Advanced Solana MEV tools for traders who move fast. Spot opportunities before they happen, avoid rugs before they pull, and stay ahead of the pack.",
     bullets: [
       "Real-time Solana mempool monitoring for new pools and market movements",
       "Smart rug detection using on-chain patterns and creator analysis",
@@ -30,32 +30,32 @@ export const siteConfig = {
   ],
   monkeyStack: {
     title: "The Monkey Stack",
-    subtitle: "A tiny Solana ecosystem: token, bot, lab.",
+    subtitle: "A complete Solana ecosystem bringing together token, bot, and community lab.",
     items: [
       {
         label: "MEVM Token",
-        title: "Access & alignment",
-        body: "Holders get better access, fee perks, and a say in what the monkey learns next. No yield promises, just closer seats to the lab.",
+        title: "Access and Benefits",
+        body: "Token holders get premium access to advanced features, reduced fees, and voting rights on what we build next. No promises of returns, just real utility and closer access to the lab.",
       },
       {
         label: "MEV Bot",
-        title: "Execution edge",
-        body: "A Solana-native bot focused on new pools, MEV vibes, and execution context for degen traders.",
+        title: "Execution Edge",
+        body: "A Solana native bot designed for speed. Monitor new pools, analyze MEV opportunities, and get execution insights that help you trade smarter and faster.",
       },
       {
         label: "Monkey Lab",
-        title: "Plays & experiments",
-        body: "A place to ship new strategies, dashboards, and experiments with the community watching over the monkey's shoulder.",
+        title: "Research and Development",
+        body: "Our open playground for testing new strategies, building better tools, and experimenting with cutting edge MEV techniques. The community helps shape what we build.",
       },
     ],
   },
   botExplainer: {
     title: "What MEV Monkey does",
     bullets: [
-      "Monitors Solana mempool and DEX events in real-time for emerging opportunities",
-      "Analyzes on-chain patterns to identify potential risks and red flags",
-      "Provides MEV-aware insights: timing windows, liquidity depth, and execution context",
-      "Delivers actionable intel while you stay in full control of your trades",
+      "Watches Solana mempool and DEX events in real time to catch opportunities as they emerge",
+      "Analyzes on chain patterns to spot potential risks and red flags before you get burned",
+      "Shows you the full picture with timing windows, liquidity depth, and MEV context",
+      "Gives you the intel you need while keeping you in complete control of every trade",
     ],
   },
   architecture: {
@@ -63,32 +63,32 @@ export const siteConfig = {
     stages: [
       {
         label: "1. Intake",
-        title: "Mempool + DEX feeds",
-        body: "Listen to Solana RPC/WebSocket streams for new pools, big swaps, and gas spikes.",
+        title: "Mempool and DEX Feeds",
+        body: "Listening to Solana RPC and WebSocket streams to catch new pools, major swaps, and unusual gas activity as they happen.",
       },
       {
         label: "2. Filters",
-        title: "Basic sanity checks",
-        body: "Filter obvious scams and nonsense based on rules and block history. Still not perfect.",
+        title: "Smart Filtering",
+        body: "Automatically filters out obvious scams and suspicious activity using pattern recognition and historical data. Gets smarter over time.",
       },
       {
         label: "3. Signals",
-        title: "Snipes & warnings",
-        body: "Produce candidate entries and rug/MEV warnings in plain language.",
+        title: "Trade Signals",
+        body: "Generates clear entry opportunities and warns you about potential rugs or MEV traps in language you can actually understand.",
       },
       {
         label: "4. Execution",
-        title: "You stay in control",
-        body: "Bot can pre-fill transactions, but you always confirm in your own wallet.",
+        title: "Your Control",
+        body: "The bot prepares transactions for you, but every trade requires your confirmation. Your wallet, your keys, your decisions.",
       },
     ],
   },
   token: {
     title: "MEVM Token Benefits",
     bullets: [
-      "Access tiers: Free basic tools for everyone, premium features for MEVM holders",
-      "Fee benefits: MEVM holders enjoy reduced bot fees and priority access to new features",
-      "Community voice: Vote on which strategies and tools we build next",
+      "Free basic tools for everyone, with premium features unlocked for MEVM holders",
+      "Token holders get reduced bot fees and early access to new features before anyone else",
+      "Help decide what we build next through community votes and feature proposals",
     ],
     disclaimer:
       "MEVM provides access and benefits, not guaranteed returns. Trade responsibly.",
@@ -100,36 +100,36 @@ export const siteConfig = {
         label: "Phase 0",
         title: "Closet chaos",
         bullets: [
-          "Ugly scripts and notebooks.",
-          "Monkey screaming at Solana logs.",
-          "Internal dev-only tests.",
+          "Raw scripts and experimental code",
+          "Internal testing on Solana devnet",
+          "Building the foundation",
         ],
       },
       {
         label: "Phase 1",
         title: "Prototype bot",
         bullets: [
-          "Solana-only prototype hooked to test wallets.",
-          "New pool radar, basic rug hints.",
-          "Hard-coded safeties and logs.",
+          "Working Solana prototype with test wallets",
+          "New pool detection and basic rug warnings",
+          "Core safety features and logging system",
         ],
       },
       {
         label: "Phase 2",
         title: "Closed degen circle",
         bullets: [
-          "Small invite-only beta.",
-          "Strict caps and disclaimers.",
-          "Feedback into next bot iterations.",
+          "Limited invite only beta testing",
+          "Gathering real user feedback",
+          "Refining features based on trader input",
         ],
       },
       {
         label: "Phase 3",
         title: "Public lab",
         bullets: [
-          "Public UI for the bot tools.",
-          "MEVM-based access tiers and fees.",
-          "Docs explaining every module and risk.",
+          "Public launch with full featured UI",
+          "MEVM token integration for access tiers",
+          "Complete documentation and guides",
         ],
       },
     ],
@@ -148,7 +148,7 @@ export const siteConfig = {
   community: {
     title: "Join the Lab",
     body:
-      "Built for Solana traders who want an edge. Whether you're hunting new launches or avoiding traps, MEV Monkey gives you the intel you need. Join our community to stay updated and help shape what we build next.",
+      "Built for Solana traders who want an edge. Whether you're hunting new launches or avoiding traps, MEV Monkey gives you the intel you need to trade smarter. Join our community to get updates and help us build the tools traders actually want.",
     ctas: ["Join Telegram", "Follow on X"],
   },
 };
