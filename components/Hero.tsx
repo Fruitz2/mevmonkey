@@ -62,16 +62,13 @@ export default function Hero() {
 
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-primary/20 to-sol/20 blur-3xl rounded-full animate-pulse" />
-              <div className="absolute inset-0 animate-spin-slow">
-                <div className="h-full w-full rounded-full border border-yellow-primary/20" />
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-primary/10 to-sol/10 blur-3xl rounded-full opacity-50" />
               <Image
                 src="/logo.png"
                 alt="MEV Monkey"
                 width={2000}
                 height={2000}
-                className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-110 transition-transform duration-700 ease-out w-full h-full object-contain"
+                className="animate-fade-in drop-shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500 w-full h-full object-contain"
                 priority
               />
             </div>
