@@ -14,7 +14,14 @@ export default function MonkeyStack() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {siteConfig.monkeyStack.items.map((item, i) => (
+          {[
+            {
+              label: "MEV Bot",
+              title: "Telegram Bot Access",
+              body: "Trade Solana smarter through our Telegram bot (@mevmonkey_bot). Monitor new pools, get instant rug alerts, and access MEV insights right from your phone. Currently in development.",
+            },
+            ...siteConfig.monkeyStack.items,
+          ].map((item, i) => (
             <div key={i} className="panel group cursor-pointer">
               <div className="text-sm font-mono text-yellow-primary uppercase tracking-wider mb-4 group-hover:text-yellow-secondary transition-colors">
                 {item.label}

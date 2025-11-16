@@ -6,20 +6,20 @@ export default function TeamNarrative() {
       <div className="container mx-auto max-w-4xl">
         <div className="panel text-center">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-yellow-primary mb-8">
-            Built by traders, for traders
+            Who built this
           </h2>
           
           <div className="space-y-6 text-lg text-muted leading-relaxed">
             <p>
-              Our team has been deep in the Solana ecosystem since the beginning. We&apos;ve traded through the ups and downs, built tools for ourselves, and learned what actually works in fast moving markets.
+              Small team that trades Solana and got tired of manually checking every new token launch. Started writing scripts to automate the boring parts. Realized other people might find them useful.
             </p>
             
             <p>
-              MEV Monkey started as internal scripts we used to monitor new token launches and spot red flags before committing capital. After months of refinement and testing on our own trades, we decided to build it into a proper tool that other traders could use.
+              This isn&apos;t some venture backed project with a roadmap written by consultants. It&apos;s tools we actually use. If it helps you catch a rug or spot an entry, great. If not, feedback helps us make it better.
             </p>
             
             <p>
-              We&apos;re not promising magic. We&apos;re offering the same tools and insights we use ourselves. Real time data, pattern recognition, and clear warnings. The kind of edge that comes from experience and good engineering, not hype.
+              We&apos;re putting this out there because the Solana trading scene moves too fast to do everything manually. Bot does the watching. You do the thinking. That&apos;s the split.
             </p>
           </div>
         </div>
