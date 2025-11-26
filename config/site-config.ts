@@ -6,7 +6,7 @@ export const siteConfig = {
   },
   links: {
     pump: "https://pump.fun/coin/REPLACE_ME",
-    x: "https://x.com/mevmonkey",
+    x: "https://x.com/mevmonkeyx",
     tg: "https://t.me/mevmonkey",
     contract: "REPLACE_ME",
   },
