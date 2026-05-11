@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #f4ead5;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: none;
+}
+
+/* ---- terminal grid background ---- */
+.grid-bg {
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(rgba(217, 255, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 255, 0, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.grid-bg-fine {
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(rgba(217, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 255, 0, 0.05) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* ---- CRT scanlines ---- */
+.scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.22) 0px,
+    rgba(0,0,0,0.22) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* ---- terminal panel ---- */
+.panel {
+  background: #0f1410;
+  border: 1px solid rgba(217, 255, 0, 0.18);
+  position: relative;
+}
+
+.panel-glow {
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 255, 0, 0.18),
+    0 0 0 1px rgba(217, 255, 0, 0.05),
+    0 0 40px rgba(217, 255, 0, 0.04);
+}
+
+.panel-header {
+  border-bottom: 1px solid rgba(217, 255, 0, 0.18);
+  background:
+    linear-gradient(90deg, rgba(217, 255, 0, 0.06), transparent 60%),
+    #0a0d08;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d9ff00;
+  padding: 6px 10px;
+}
+
+/* ---- corner tick marks (terminal frame) ---- */
+.ticks {
+  position: relative;
+}
+.ticks::before, .ticks::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #d9ff00;
+}
+.ticks::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.ticks::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+.ticks-full {
+  position: relative;
+}
+.ticks-full > .tick {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #d9ff00;
+}
+.ticks-full > .tick-tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.ticks-full > .tick-tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+.ticks-full > .tick-bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+.ticks-full > .tick-br { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+/* ---- spray paint / stencil drip ---- */
+.stencil {
+  font-family: 'Stardos Stencil', Impact, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  /* paint-drip via text shadow + offset */
+  text-shadow:
+    0 2px 0 rgba(217, 255, 0, 0.0),
+    0 4px 12px rgba(217, 255, 0, 0.15);
+  position: relative;
+}
+
+.spray {
+  background-image:
+    radial-gradient(circle at 12% 84%, rgba(217, 255, 0, 0.15) 0px, transparent 2px),
+    radial-gradient(circle at 78% 92%, rgba(217, 255, 0, 0.12) 0px, transparent 2px),
+    radial-gradient(circle at 42% 86%, rgba(217, 255, 0, 0.10) 0px, transparent 1.5px),
+    radial-gradient(circle at 62% 88%, rgba(217, 255, 0, 0.10) 0px, transparent 1.5px),
+    radial-gradient(circle at 22% 92%, rgba(217, 255, 0, 0.08) 0px, transparent 1px),
+    radial-gradient(circle at 88% 86%, rgba(217, 255, 0, 0.10) 0px, transparent 1.5px);
+}
+
+/* ---- phosphor glow for key wire-yellow text ---- */
+.glow {
+  text-shadow:
+    0 0 6px rgba(217, 255, 0, 0.55),
+    0 0 18px rgba(217, 255, 0, 0.25);
+}
+
+.glow-strong {
+  text-shadow:
+    0 0 4px rgba(217, 255, 0, 0.8),
+    0 0 14px rgba(217, 255, 0, 0.5),
+    0 0 32px rgba(217, 255, 0, 0.25);
+}
+
+/* ---- scrollbar restyled to terminal look ---- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb {
+  background: #1a2010;
+  border-left: 1px solid #d9ff00;
+}
+::-webkit-scrollbar-thumb:hover { background: #2a3015; }
+
+/* ---- selection ---- */
+::selection {
+  background: #d9ff00;
+  color: #0a0a0a;
+}
+
+/* ---- subtle film grain overlay ---- */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.15 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+}
+
+/* ---- vertical "MEMPOOL" rail typography ---- */
+.mempool-line {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: rgba(244, 234, 213, 0.32);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.mempool-line.hit {
+  color: #d9ff00;
+}
+.mempool-line.victim {
+  color: #ff3b1f;
+}
+
+/* ---- chunky terminal button ---- */
+.btn-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  border: 1px solid #d9ff00;
+  color: #d9ff00;
+  background:
+    linear-gradient(180deg, rgba(217, 255, 0, 0.08), rgba(217, 255, 0, 0.02));
+  position: relative;
+  cursor: none;
+  transition: all 0.15s ease-out;
+}
+.btn-term:hover {
+  background: #d9ff00;
+  color: #0a0a0a;
+  box-shadow: 0 0 24px rgba(217, 255, 0, 0.45);
+}
+.btn-term::before, .btn-term::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+}
+.btn-term::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.btn-term::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  background: #d9ff00;
+  color: #0a0a0a;
+  border: 1px solid #d9ff00;
+  font-weight: 700;
+  position: relative;
+  cursor: none;
+  transition: all 0.15s ease-out;
+  box-shadow: 0 0 24px rgba(217, 255, 0, 0.35);
+}
+.btn-solid:hover {
+  background: #a8c900;
+  box-shadow: 0 0 36px rgba(217, 255, 0, 0.65);
+}
+
+/* ---- code-style boxes ---- */
+.kbd {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  border: 1px solid rgba(217, 255, 0, 0.4);
+  color: #d9ff00;
+  background: rgba(217, 255, 0, 0.08);
+  letter-spacing: 0.08em;
+}
+
+/* ---- horizontal divider with terminal label ---- */
+.div-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(217, 255, 0, 0.7);
+}
+.div-label::before, .div-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217, 255, 0, 0.3), transparent);
+}
+
+/* ---- striped warning band ---- */
+.warning-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #d9ff00 0 12px,
+    #0a0a0a 12px 24px
+  );
+}
+
+/* link reset */
+a { color: inherit; text-decoration: none; }
